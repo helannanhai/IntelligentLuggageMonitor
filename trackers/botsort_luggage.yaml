@@ -1,0 +1,27 @@
+# Ultralytics YOLOv8.4.0 BOT-SORT custom config for Luggage Tracking
+# Optimized for stable suitcase/backpack detection and ID persistence
+
+tracker_type: botsort
+
+# Detection confidence thresholds (optimized for continuity)
+track_high_thresh: 0.3      # Lowered for better detection continuity (was 0.5)
+track_low_thresh: 0.15      # Keep low confidence detections (was 0.25)
+new_track_thresh: 0.2       # Easier to start new tracks (was 0.5)
+
+# Tracking stability
+track_buffer: 180           # Extended buffer for better continuity (was 120)
+match_thresh: 0.7           # More tolerant matching (was 0.8)
+
+# IoU-based matching (for bounding box geometry)
+gmc_method: sparseOptFlow
+proximity_thresh: 0.65      # More tolerant to shape changes (was 0.9, too strict)
+
+# Appearance-based matching (using native ReID features)
+appearance_thresh: 0.35     # Stricter appearance matching (was 0.15, too loose)
+
+# ReID settings
+with_reid: True
+reid_weights: osnet_x0_25_msmt17.pt
+
+model: auto                 # Use native features without loading external ReID model
+fuse_score: False
