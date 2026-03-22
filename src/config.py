@@ -8,7 +8,7 @@
 MODEL_PATH = "yolov8n-seg.pt"
 VIDEO_PATH = r"Dataset\JiMeng\1_4.mov"
 VIDEO_PATH1 = r"Dataset\JiMeng\1_3.mov"
-VIDEO_PATH1 = r""
+VIDEO_PATH1 = 2
 VIDEO_PATH1 = r""
 VIDEO_PATH1 = r""
 VIDEO_PATH1 = r""

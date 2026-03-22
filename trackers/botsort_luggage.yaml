@@ -20,7 +20,7 @@ proximity_thresh: 0.65      # More tolerant to shape changes (was 0.9, too stric
 appearance_thresh: 0.35     # Stricter appearance matching (was 0.15, too loose)
 
 # ReID settings
-with_reid: True
+with_reid: False              # Disable external ReID model for better stability
 reid_weights: osnet_x0_25_msmt17.pt
 
 model: auto                 # Use native features without loading external ReID model

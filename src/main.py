@@ -153,7 +153,7 @@ class LuggageMonitor:
                 
                 if matched_old_id is not None:
                     self.person_id_mapping[tid] = matched_old_id
-                    print(f"[Re-ID] ID {tid} -> {matched_old_id} (similarity={similarity:.3f})"))
+                    print(f"[Re-ID] ID {tid} -> {matched_old_id} (similarity={similarity:.3f})")
                     self.people_features_history[matched_old_id].update({
                         "features": new_features, "last_frame": self.frame_count,
                         "last_center": new_center, "still_tracked": True
