@@ -4,4 +4,9 @@ outputs/
 test_ahmed's/
 src/__pycache__/
 .vscode/
-yolo26x.pt
+app/__pycache__/
+models/
+app/config/__pycache__/
+app/pipeline/__pycache__/
+app/adapters/__pycache__/
+app/core/__pycache__/
